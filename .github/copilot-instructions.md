@@ -178,7 +178,7 @@ mon-projet/
 
 ## Qualité du code attendue
 
-- `"use strict";` en première ligne de `script.js`
+- `"use strict";` en première ligne de 
 - Nommage camelCase en anglais
 - Fonctions courtes avec un seul rôle
 - `===` au lieu de `==`

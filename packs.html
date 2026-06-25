@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ouverture de pack</title>
+    <link rel="stylesheet" href="css/packs.css">
+</head>
+<body>
+
+<a href="index.html" class="back-btn">Accueil</a>
+
+<main class="packs-page">
+
+    <h1>OUVERTURE DE PACK</h1>
+
+    <section class="packs-layout">
+
+        <div class="panel pack-list">
+            <h2>CHOISISSEZ VOTRE PACK</h2>
+
+            <button class="pack-option active" data-pack="debutant" data-count="5">
+                <img src="images/pack-debutant.png" alt="">
+                <div>
+                    <strong>PACK DÉBUTANT</strong>
+                    <span>5 stickers</span>
+                </div>
+            </button>
+
+            <button class="pack-option" data-pack="standard" data-count="7">
+                <img src="images/pack-standard.png" alt="">
+                <div>
+                    <strong>PACK STANDARD</strong>
+                    <span>7 stickers</span>
+                </div>
+            </button>
+
+            <button class="pack-option" data-pack="premium" data-count="10">
+                <img src="images/pack-premium.png" alt="">
+                <div>
+                    <strong>PACK PREMIUM</strong>
+                    <span>10 stickers</span>
+                </div>
+            </button>
+        </div>
+
+        <div class="panel pack-opening">
+            <h2>OUVERTURE DU PACK</h2>
+
+            <img id="big-pack" src="images/pack-debutant.png" alt="Pack">
+
+            <h3 id="pack-title">PACK DÉBUTANT</h3>
+
+            <button id="open-pack">Ouvrir le pack</button>
+        </div>
+
+        <div class="panel results-panel">
+            <h2>STICKERS OBTENUS</h2>
+
+            <div id="results" class="results"></div>
+
+            <div class="result-footer">
+                <p id="result-text"></p>
+
+                <button id="go-to-stickers">
+                    Ajouter à la collection
+                </button>
+            </div>
+        </div>
+
+    </section>
+
+</main>
+
+<script src="js/packs.js"></script>
+</body>
+</html>

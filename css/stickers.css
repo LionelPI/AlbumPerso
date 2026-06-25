@@ -1,0 +1,153 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    min-height:100%;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    color:white;
+    background:url("../images/stadium-bg.png") center/cover no-repeat fixed;
+    overflow-x:hidden;
+    overflow-y:auto;
+    position:relative;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:linear-gradient(
+            to bottom,
+            rgba(0,0,25,.92),
+            rgba(0,35,90,.70),
+            rgba(55,0,95,.38)
+    );
+    z-index:0;
+}
+
+.back-btn{
+    position:fixed;
+    top:18px;
+    left:24px;
+    z-index:10;
+    height:48px;
+    padding:0 20px;
+    display:flex;
+    align-items:center;
+    border:1px solid rgba(255,255,255,.45);
+    border-radius:10px;
+    color:white;
+    text-decoration:none;
+    font-size:20px;
+    font-weight:800;
+    background:rgba(0,0,25,.65);
+}
+
+.stickers-page{
+    position:relative;
+    z-index:2;
+    min-height:100vh;
+    padding:26px 36px 60px;
+}
+
+.stickers-page h1{
+    text-align:center;
+    font-size:54px;
+    font-weight:900;
+    letter-spacing:8px;
+    margin-bottom:32px;
+}
+
+.stickers-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(170px, 1fr));
+    gap:20px;
+    padding-bottom:50px;
+}
+
+.my-sticker{
+    position:relative;
+    width:100%;
+    aspect-ratio:0.68 / 1;
+    border:2px solid rgba(255,255,255,.35);
+    border-radius:10px;
+    overflow:hidden;
+    background:linear-gradient(180deg,#071a55,#020819);
+    box-shadow:0 0 18px rgba(0,0,0,.55);
+}
+
+.my-sticker img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+.add-btn{
+    position:absolute;
+    right:10px;
+    bottom:10px;
+    z-index:3;
+    width:38px;
+    height:38px;
+    border:none;
+    border-radius:50%;
+    background:linear-gradient(180deg,#2f7dff,#0f47d7);
+    color:white;
+    font-size:28px;
+    font-weight:900;
+    cursor:pointer;
+    box-shadow:0 0 14px rgba(47,125,255,.65);
+}
+
+.add-btn:hover{
+    transform:scale(1.08);
+}
+
+.empty-message{
+    grid-column:1 / -1;
+    text-align:center;
+    font-size:24px;
+    font-weight:800;
+    margin-top:80px;
+    opacity:.9;
+}
+
+@media screen and (orientation:landscape) and (max-height:500px){
+
+    .back-btn{
+        top:10px;
+        left:12px;
+        height:34px;
+        padding:0 12px;
+        font-size:14px;
+    }
+
+    .stickers-page{
+        padding:14px 18px 40px;
+    }
+
+    .stickers-page h1{
+        font-size:34px;
+        letter-spacing:5px;
+        margin-bottom:18px;
+    }
+
+    .stickers-grid{
+        grid-template-columns:repeat(auto-fill, minmax(130px, 1fr));
+        gap:12px;
+    }
+
+    .add-btn{
+        width:28px;
+        height:28px;
+        font-size:20px;
+    }
+}

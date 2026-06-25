@@ -1,20 +1,60 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mon projet 122</title>
+  <title>Mon Album Panini</title>
+
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-  <header>
-    <h1>Mon projet</h1>
-  </header>
 
-  <main>
-    <ul id="list"></ul>
-  </main>
+<header>
 
-  <script src="js/script.js"></script>
+  <!-- Titre centré -->
+  <div class="logo-text">
+    <span>MON ALBUM</span>
+    <strong>PANINI</strong>
+  </div>
+
+  <!-- Boutons à droite -->
+  <div class="header-buttons">
+
+    <button class="btn-login" onclick="window.location.href='login.html'">
+      👤 Se connecter
+    </button>
+
+    <button class="btn-register" onclick="window.location.href='register.html'">
+      👥 Créer un compte
+    </button>
+
+  </div>
+
+</header>
+
+<main>
+
+  <div class="card stickers">
+    <button onclick="window.location.href='stickers.html'">
+      Mes stickers
+    </button>
+  </div>
+
+  <div class="card album">
+    <button onclick="window.location.href='album.html'">
+      Ouvrir l'album
+    </button>
+  </div>
+
+  <div class="card packs">
+    <button onclick="window.location.href='packs.html'">
+      Ouvrir les packs
+    </button>
+  </div>
+
+</main>
+
 </body>
 </html>
